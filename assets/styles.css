@@ -405,6 +405,19 @@ blockquote.card cite{display:block;margin-top:12px;font-family:'Archivo',sans-se
 /* footer legal row */
 .foot.legal{margin-top:18px;padding-top:16px;border-top:1px solid var(--edge);justify-content:flex-start}
 
+/* fleet photography */
+.fleet{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.fleet{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.fleet{grid-template-columns:1fr}}
+.fleet-card{padding:0;overflow:hidden;gap:0}
+.fleet-card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;transition:transform .55s ease}
+.fleet-card:hover img{transform:scale(1.04)}
+.fleet-card figcaption{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.fleet-banner{margin-top:40px;border-top:4px solid var(--green);overflow:hidden}
+.fleet-banner img{width:100%;display:block;height:auto}
+.photo-band{overflow:hidden;border-bottom:4px solid var(--green)}
+.photo-band img{width:100%;display:block;height:auto}
+
 
 /* long-form legal / prose pages */
 .prose{max-width:70ch}
