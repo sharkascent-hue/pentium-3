@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Privacy Policy | Pentium Logistics</title>
 <meta name="description" content="How Pentium Logistics collects, uses and stores the information you send us when requesting a transport quote.">
-<link rel="canonical" href="https://www.pentiumlogistics.ie/privacy.html">
+<link rel="canonical" href="https://pentium-3.vercel.app/privacy.html">
 <meta name="theme-color" content="#171b1c">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IE">
 <meta property="og:site_name" content="Pentium Logistics">
 <meta property="og:title" content="Privacy Policy | Pentium Logistics">
 <meta property="og:description" content="How Pentium Logistics collects, uses and stores the information you send us when requesting a transport quote.">
-<meta property="og:url" content="https://www.pentiumlogistics.ie/privacy.html">
+<meta property="og:url" content="https://pentium-3.vercel.app/privacy.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +20,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400..900;125,600..900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">{
-  "@context":"https://schema.org","@type":"LocalBusiness","@id":"https://www.pentiumlogistics.ie/#business",
+  "@context":"https://schema.org","@type":"LocalBusiness","@id":"https://pentium-3.vercel.app/#business",
   "name":"Pentium Logistics",
   "description":"B2B pallet distribution, Moffett collections and recyclable waste logistics. Dublin based, working nationwide.",
-  "url":"https://www.pentiumlogistics.ie/","telephone":"+353858191847","email":"info@pentiumlogistics.ie",
+  "url":"https://pentium-3.vercel.app/","telephone":"+353858191847","email":"info@pentiumlogistics.ie",
   "address":{"@type":"PostalAddress","addressLocality":"Dublin","addressCountry":"IE"},
   "areaServed":{"@type":"Country","name":"Ireland"},
   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"}],
@@ -115,68 +115,7 @@
 </section>
 </main>
 
-<template id="quote-block">
-<section class="sec-alt">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">Get a price</div>
-      <h2 class="sec">Need something moved?<br><em>Tell us what, where and when.</em></h2>
-    </div>
-    <div class="quote-wrap">
-      <div class="rv">
-        <p class="lede">Fill in what you know and send it straight to us on WhatsApp or by email. If it's urgent, ring &mdash; you'll get a person, not a queue.</p>
-        <div class="reach">
-          <a href="tel:+353858191847"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone2"/></svg><span><span class="k">Call</span><span class="v">085 819 1847</span></span></a>
-          <a href="https://wa.me/353858191847" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><span class="k">WhatsApp or text</span><span class="v">085 819 1847</span></span></a>
-          <a href="mailto:info@pentiumlogistics.ie"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg><span><span class="k">Email</span><span class="v">info@pentiumlogistics.ie</span></span></a>
-        </div>
-      </div>
 
-      <form class="qform2 rv" novalidate>
-        <div class="qgrid">
-          <label>Your name<input type="text" name="name" autocomplete="name"></label>
-          <label>Phone number<input type="tel" name="phone" autocomplete="tel" placeholder="So we can ring you back"></label>
-          <label>Collection Eircode / postcode<input type="text" name="from" placeholder="e.g. D12 AB34"></label>
-          <label>Delivery Eircode / postcode<input type="text" name="to" placeholder="e.g. T12 CD56"></label>
-          <label>Number of pallets / items<input type="text" name="qty" placeholder="e.g. 3 pallets"></label>
-          <label>Dimensions<input type="text" name="dims" placeholder="L &times; W &times; H"></label>
-          <label>Approximate weight<input type="text" name="weight" placeholder="e.g. 600 kg"></label>
-          <label>Collection date<input type="date" name="date"></label>
-          <label>Tail lift required?
-            <select name="taillift"><option value="">Not sure</option><option>Yes</option><option>No</option></select>
-          </label>
-          <label>Moffett required?
-            <select name="moffett"><option value="">Not sure</option><option>Yes</option><option>No</option></select>
-          </label>
-          <label class="full">Vehicle required
-            <select name="vehicle">
-              <option value="">Not sure &mdash; recommend one</option>
-              <option>Standard van</option>
-              <option>Tail-lift van</option>
-              <option>Drop-side van</option>
-              <option>Rigid with Moffett</option>
-              <option>Rigid truck</option>
-            </select>
-          </label>
-          <label class="full">Photo of the load <span class="hint">&mdash; optional. Pick it here as a reminder, then attach it to your WhatsApp message.</span>
-            <input type="file" name="photo" accept="image/*">
-          </label>
-          <label class="full">Anything else we should know<textarea name="notes" placeholder="Access, timings, fragile goods, anything awkward"></textarea></label>
-        </div>
-        <p class="qerr" role="alert" hidden></p>
-        <div class="qsend">
-          <button type="button" class="btn btn-wa btn-big" data-send="wa"><span>Send on WhatsApp</span></button>
-        </div>
-        <p class="qnote">Fastest way to reach us &mdash; it opens WhatsApp with your details filled in, so you can check them before sending. Prefer email? <a href="#" data-send="mail">Send it by email instead</a>.</p>
-        <div class="qdone" role="status" hidden>
-          <b>Sent to WhatsApp.</b>
-          <p>If WhatsApp didn't open, ring us on <a href="tel:+353858191847">085 819 1847</a> or email <a href="mailto:info@pentiumlogistics.ie">info@pentiumlogistics.ie</a>.</p>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-</template>
 <footer>
   <div class="wrap foot">
     <a class="logo" href="index.html" aria-label="Back to home">

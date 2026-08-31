@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.pentiumlogistics.ie/sitemap.xml
+Sitemap: https://pentium-3.vercel.app/sitemap.xml

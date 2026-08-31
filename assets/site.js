@@ -14,9 +14,6 @@
 
 // quote blocks: one template, cloned into every page that needs it
 (function(){
-  const tpl=document.getElementById('quote-block');
-  if(!tpl) return;
-  document.querySelectorAll('.quote-slot').forEach(slot=>slot.appendChild(tpl.content.cloneNode(true)));
   const PHONE='353858191847', MAIL='info@pentiumlogistics.ie';
   const FIELDS=[['Name','name'],['Phone','phone'],['Collection','from'],['Delivery','to'],['Pallets / items','qty'],['Dimensions','dims'],['Weight','weight'],['Collection date','date'],['Tail lift','taillift'],['Moffett','moffett'],['Vehicle','vehicle'],['Notes','notes']];
   function message(form){
