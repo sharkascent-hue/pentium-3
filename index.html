@@ -114,11 +114,11 @@
   <div class="hero-brand">
     <div class="kicker">Dublin &amp; nationwide</div>
     <h1>PENT<em>I</em>UM</h1>
-    <div class="strap">Pallet, Moffett &amp; Environmental Logistics</div>
+    <div class="strap">Nationwide Pallet Distribution &amp; Moffett Collections</div>
     <div class="hero-cta">
-      <a class="btn btn-green" href="index.html#quote"><span>Get a transport quote</span></a>
-      <a class="btn btn-line" href="tel:+353858191847"><span>Call 085 819 1847</span></a>
-      <a class="btn btn-wa" href="https://wa.me/353858191847" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span></a>
+      <a class="btn btn-green btn-big" href="index.html#quote"><span>Get a transport quote</span></a>
+      <a class="btn btn-quiet" href="tel:+353858191847"><span>Call 085 819 1847</span></a>
+      <a class="btn btn-quiet" href="https://wa.me/353858191847" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span></a>
     </div>
   </div>
   <div class="split">
@@ -155,7 +155,7 @@
     <div class="rv">
       <div class="eyebrow">Choose a service</div>
       <h2 class="sec">What are you<br><em>moving today?</em></h2>
-      <p class="lede">Two divisions under one operation. Open either one for the detail &mdash; what we carry, how it's collected and how it's booked.</p>
+      <p class="lede">Two divisions of the one company. Open either one for the detail &mdash; what we carry, how it's collected and how it's booked.</p>
     </div>
     <div class="area-grid two-up">
       <article class="area rv" id="area-express">
@@ -267,7 +267,7 @@
       <h2 class="sec">Built for the businesses<br>that keep things moving</h2>
     </div>
     <div class="cards">
-      <div class="card rv"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-truck"/></svg><h3>Own fleet, own drivers</h3><p>Your freight stays on Pentium trucks with Pentium drivers &mdash; no subcontractors, no handing it on.</p></div>
+      <div class="card rv"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-truck"/></svg><h3>Own fleet, own drivers</h3><p>Your freight stays on Pentium trucks with Pentium drivers &mdash; no subcontracting, and one operation accountable for the job start to finish.</p></div>
       <div class="card rv"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-forklift"/></svg><h3>Self-sufficient collections</h3><p>Moffett-equipped rigids and tail lifts mean no waiting for a forklift on site. We arrive, load, and go.</p></div>
       <div class="card rv"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg><h3>Fast response</h3><p>Ring or WhatsApp and you get a person. Same-day collections where the fleet allows, and scheduled rounds you can set your week by.</p></div>
       <div class="card rv"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg><h3>Reliable B2B service</h3><p>Goods in transit insurance, proper waste handling and paperwork to match &mdash; on every job.</p></div>
@@ -374,10 +374,19 @@
 
       <form class="qform2 rv" novalidate>
         <div class="qgrid">
+          <label class="full">Service required
+            <select name="service">
+              <option value="">Not sure &mdash; advise me</option>
+              <option>Pentium Express &mdash; pallet distribution</option>
+              <option>Pentium Environmental &mdash; Moffett collection / recyclable waste</option>
+            </select>
+          </label>
           <label>Your name<input type="text" name="name" autocomplete="name"></label>
+          <label>Company<input type="text" name="company" autocomplete="organization"></label>
           <label>Phone number<input type="tel" name="phone" autocomplete="tel" placeholder="So we can ring you back"></label>
-          <label>Collection Eircode / postcode<input type="text" name="from" placeholder="e.g. D12 AB34"></label>
-          <label>Delivery Eircode / postcode<input type="text" name="to" placeholder="e.g. T12 CD56"></label>
+          <label>Email<input type="email" name="email" autocomplete="email" placeholder="For the written quote"></label>
+          <label class="full">Collection address &amp; Eircode<input type="text" name="from" placeholder="Street, town, Eircode"></label>
+          <label class="full">Delivery address &amp; Eircode<input type="text" name="to" placeholder="Street, town, Eircode"></label>
           <label>Number of pallets / items<input type="text" name="qty" placeholder="e.g. 3 pallets"></label>
           <label>Dimensions<input type="text" name="dims" placeholder="L &times; W &times; H"></label>
           <label>Approximate weight<input type="text" name="weight" placeholder="e.g. 600 kg"></label>

@@ -15,7 +15,7 @@
 // quote blocks: one template, cloned into every page that needs it
 (function(){
   const PHONE='353858191847', MAIL='info@pentiumlogistics.ie';
-  const FIELDS=[['Name','name'],['Phone','phone'],['Collection','from'],['Delivery','to'],['Pallets / items','qty'],['Dimensions','dims'],['Weight','weight'],['Collection date','date'],['Tail lift','taillift'],['Moffett','moffett'],['Vehicle','vehicle'],['Notes','notes']];
+  const FIELDS=[['Service','service'],['Name','name'],['Company','company'],['Phone','phone'],['Email','email'],['Collection','from'],['Delivery','to'],['Pallets / items','qty'],['Dimensions','dims'],['Weight','weight'],['Collection date','date'],['Tail lift','taillift'],['Moffett','moffett'],['Vehicle','vehicle'],['Notes','notes']];
   function message(form){
     const val=n=>{const el=form.elements[n];return el&&el.value?el.value.trim():'';};
     const lines=FIELDS.map(([label,n])=>val(n)?label+': '+val(n):'').filter(Boolean);
@@ -23,6 +23,12 @@
     if(photo&&photo.files&&photo.files.length) lines.push('Photo: '+photo.files[0].name+' (attaching separately)');
     return 'Transport quote request\n\n'+(lines.length?lines.join('\n'):'(no details filled in)');
   }
+  document.querySelectorAll('.quote-slot[data-service]').forEach(slot=>{
+    const sel=slot.querySelector('select[name="service"]');
+    if(!sel) return;
+    const want=slot.dataset.service;
+    [...sel.options].forEach(o=>{ if(o.textContent===want) sel.value=o.value||o.textContent; });
+  });
   document.querySelectorAll('.qform2').forEach(form=>{
     const err=form.querySelector('.qerr'), done=form.querySelector('.qdone');
     const fail=(msg,el)=>{

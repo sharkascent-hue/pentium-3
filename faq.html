@@ -182,10 +182,19 @@
 
       <form class="qform2 rv" novalidate>
         <div class="qgrid">
+          <label class="full">Service required
+            <select name="service">
+              <option value="">Not sure &mdash; advise me</option>
+              <option>Pentium Express &mdash; pallet distribution</option>
+              <option>Pentium Environmental &mdash; Moffett collection / recyclable waste</option>
+            </select>
+          </label>
           <label>Your name<input type="text" name="name" autocomplete="name"></label>
+          <label>Company<input type="text" name="company" autocomplete="organization"></label>
           <label>Phone number<input type="tel" name="phone" autocomplete="tel" placeholder="So we can ring you back"></label>
-          <label>Collection Eircode / postcode<input type="text" name="from" placeholder="e.g. D12 AB34"></label>
-          <label>Delivery Eircode / postcode<input type="text" name="to" placeholder="e.g. T12 CD56"></label>
+          <label>Email<input type="email" name="email" autocomplete="email" placeholder="For the written quote"></label>
+          <label class="full">Collection address &amp; Eircode<input type="text" name="from" placeholder="Street, town, Eircode"></label>
+          <label class="full">Delivery address &amp; Eircode<input type="text" name="to" placeholder="Street, town, Eircode"></label>
           <label>Number of pallets / items<input type="text" name="qty" placeholder="e.g. 3 pallets"></label>
           <label>Dimensions<input type="text" name="dims" placeholder="L &times; W &times; H"></label>
           <label>Approximate weight<input type="text" name="weight" placeholder="e.g. 600 kg"></label>
