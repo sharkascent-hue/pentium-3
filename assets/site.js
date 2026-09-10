@@ -1,15 +1,15 @@
 // van intro: drives right and pulls the page open behind it
 (function(){
-  const intro=document.getElementById('intro'), van=document.getElementById('intro-van');
+  const intro=document.getElementById('intro');
   if(!intro) return;
-  const kill=()=>{intro.remove(); if(van) van.remove();};
+  const kill=()=>{intro.remove();};
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){kill();return;}
   const root=document.documentElement;
   root.classList.add('intro-on');
   let gone=false;
   const done=()=>{if(gone)return;gone=true;kill();root.classList.remove('intro-on');};
   intro.addEventListener('animationend',e=>{if(e.animationName==='curtain')done();});
-  setTimeout(done,3300);
+  setTimeout(done,3600);
 })();
 
 // quote blocks: one template, cloned into every page that needs it

@@ -253,30 +253,32 @@ footer{padding:40px 0;border-top:1px solid var(--edge);background:var(--graphite
 .backlink::before{content:"\2190"}
 .backlink:hover{color:var(--green)}
 
-/* van intro: dusk road scene, the van drives in then drags the page open behind it */
+/* intro: the van drives a lap of Ireland, then the map pans off and the site is there */
 html.intro-on,html.intro-on body{overflow:hidden}
-#intro{position:fixed;inset:0;z-index:200;overflow:hidden;background:linear-gradient(#06090a 0%,#0b1214 42%,#16241e 62%,#1d3226 70%,#1d3226 100%);animation:curtain 2.4s linear forwards;will-change:transform}
-#intro .glow{position:absolute;left:0;right:0;bottom:30%;height:34vh;background:radial-gradient(58% 100% at 50% 100%,rgba(122,193,66,.34),rgba(122,193,66,.10) 42%,transparent 74%)}
-#intro .skyline{position:absolute;left:0;right:0;bottom:30%;width:100%;height:16vh;fill:#050b0a;opacity:1}
-#intro .stars{position:absolute;left:0;right:0;top:0;height:52%;background-image:radial-gradient(1.6px 1.6px at 12% 22%,rgba(244,247,244,.55),transparent),radial-gradient(1.4px 1.4px at 28% 12%,rgba(244,247,244,.4),transparent),radial-gradient(1.8px 1.8px at 46% 30%,rgba(244,247,244,.45),transparent),radial-gradient(1.4px 1.4px at 63% 16%,rgba(244,247,244,.35),transparent),radial-gradient(1.7px 1.7px at 78% 26%,rgba(244,247,244,.5),transparent),radial-gradient(1.4px 1.4px at 90% 14%,rgba(244,247,244,.32),transparent)}
-#intro .ground{position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(#242c2e,#151b1c);border-top:3px solid #38423f}
-#intro .kerb{position:absolute;left:0;right:0;bottom:30%;height:8px;background:repeating-linear-gradient(90deg,#7ac142 0 26px,#2b3335 26px 52px);opacity:.30}
-#intro .dashes{position:absolute;left:-60%;right:-60%;bottom:9%;height:8px;background:repeating-linear-gradient(90deg,rgba(244,247,244,.62) 0 70px,transparent 70px 170px);animation:dash .55s linear infinite}
-#intro-van{position:fixed;bottom:14%;left:0;z-index:201;width:min(80vw,680px);animation:drive 2.4s linear forwards;pointer-events:none;will-change:transform}
-#intro-van svg{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 26px rgba(0,0,0,.55))}
-#intro-van .wheel{transform-box:fill-box;transform-origin:center;animation:spin .38s linear infinite}
-@keyframes dash{to{transform:translateX(-170px)}}
-@keyframes drive{
-  0%{transform:translateX(-135%);animation-timing-function:cubic-bezier(.16,.7,.4,1)}
-  30%{transform:translateX(0);animation-timing-function:cubic-bezier(.5,0,.32,1)}
-  100%{transform:translateX(101vw)}
-}
-@keyframes curtain{
-  0%,30%{transform:translateX(0);animation-timing-function:cubic-bezier(.5,0,.32,1)}
-  100%{transform:translateX(101vw)}
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){#intro,#intro-van{display:none}}
+#intro{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  background:radial-gradient(ellipse 70% 60% at 50% 45%,#15281d 0%,#0c1413 55%,#080c0d 100%);
+  animation:curtain 3s cubic-bezier(.6,0,.3,1) forwards;will-change:transform}
+#intro .ie-map{height:min(56vh,430px);width:auto;max-width:82vw;overflow:visible}
+.ie-outline{fill:rgba(122,193,66,.07);stroke:#7ac142;stroke-width:2.4;stroke-linejoin:round;
+  stroke-dasharray:1900;stroke-dashoffset:1900;animation:draw .8s ease-out forwards}
+.ie-route{fill:none;stroke:rgba(244,247,244,.5);stroke-width:1.8;stroke-linecap:round;stroke-dasharray:6 7;
+  opacity:0;animation:routein .5s ease-out .45s forwards}
+.ie-city{fill:#f4f7f4;opacity:0;animation:pop .4s ease-out forwards}
+.ie-city.c1{animation-delay:.7s}.ie-city.c2{animation-delay:.95s}.ie-city.c3{animation-delay:1.2s}
+.ie-city.c4{animation-delay:1.45s}.ie-city.c5{animation-delay:1.7s}.ie-city.c6{animation-delay:1.95s}
+.ie-hub{fill:#7ac142}
+.ie-label{fill:#7ac142;font-family:'Archivo',sans-serif;font-size:11px;font-weight:800;letter-spacing:1.6px;
+  opacity:0;animation:pop .5s ease-out .8s forwards}
+.van-flip{transform-box:fill-box;transform-origin:center;animation:vanflip 1.9s linear .55s forwards}
+.intro-word{font-family:'Archivo',sans-serif;font-size:clamp(.6rem,2.2vw,.78rem);font-weight:800;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--fog);opacity:0;animation:pop .6s ease-out 1.9s forwards;text-align:center;padding:0 20px}
+.intro-word b{color:var(--green);font-weight:800}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes routein{to{opacity:1}}
+@keyframes pop{from{opacity:0}to{opacity:1}}
+@keyframes vanflip{0%,17%{transform:scaleX(1)}18%,57%{transform:scaleX(-1)}58%,100%{transform:scaleX(1)}}
+@keyframes curtain{0%,80%{transform:translateX(0)}100%{transform:translateX(101vw)}}
+@media(prefers-reduced-motion:reduce){#intro{display:none}}
 
 /* sister company */
 .btn-ghost{border:2px solid rgba(244,247,244,.45);color:var(--white)}

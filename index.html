@@ -68,44 +68,39 @@
       <li><a href="index.html" class="on" aria-current="page">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a class="ext" href="https://www.fastmoves.ie/" target="_blank" rel="noopener noreferrer">Fast Moves</a></li>
       <li class="cta"><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 <div id="intro" aria-hidden="true">
-  <div class="stars"></div>
-  <div class="glow"></div>
-  <svg class="skyline" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <path d="M0 150V96h54v-26h40v26h30V60h64v90z"/>
-    <path d="M150 150V72h86V52h20v20h54v78z"/>
-    <path d="M300 150V40h18v110z"/><path d="M306 40h96v9h-96z"/><path d="M396 49h9v46h-9z"/>
-    <path d="M330 150V88h120v62z"/>
-    <path d="M470 150V64h74v-18h26v18h58v86z"/>
-    <path d="M640 150V100h150v-22h44v22h60v50z"/>
-    <path d="M700 78h12v22h-12z"/><path d="M760 68h12v32h-12z"/>
-    <path d="M900 150V56h64v94z"/><path d="M924 34h16v22h-16z"/>
-    <path d="M964 150V92h96v-20h34v20h106v58z"/>
-    <path d="M1120 150V70h44v80z"/>
+  <svg class="ie-map" viewBox="-16 -8 244 302" role="img" aria-label="A Pentium van driving a route around Ireland">
+    <path class="ie-outline" d="M134.9 8.3 L185.8 19.4 L200.4 45.1 L195 62.5 L211.7 59.7 L210.8 77.7 L196.6 88.8 L184.5 100.6 L175.3 104.8 L177.4 123.5 L181.2 149.2 L192.5 176.3 L177.9 225.6 L176.6 231.1 L153.2 234.6 L114.8 246.4 L96 257.5 L86.4 270.7 L32.6 281.1 L18.8 270.7 L31.3 256.8 L10.4 248.5 L5.8 236 L31.3 223.5 L29.2 213.8 L50 205 L30 200 L39.7 195.7 L55.1 163.1 L64.7 154.8 L38 147 L15.4 145.7 L33.4 120.8 L20.9 106.2 L25 81.9 L57.6 88.8 L88.5 84.7 L96.9 70.8 L78.5 60.4 L86.8 36.1 L96.9 24.3 L124 15.3 Z"/>
+    <path id="route" class="ie-route" d="M181 149 C190 120,196 92,195 63 C165 67,120 75,89 85 C72 105,64 132,65 155 C70 170,76 185,83 197 C90 215,90 234,89 250 C120 232,158 186,181 149"/>
+    <g class="cities">
+      <circle class="ie-city c1 ie-hub" cx="181" cy="149" r="4.4"/>
+      <circle class="ie-city c2" cx="195" cy="63" r="3.2"/>
+      <circle class="ie-city c3" cx="89" cy="85" r="3.2"/>
+      <circle class="ie-city c4" cx="65" cy="155" r="3.2"/>
+      <circle class="ie-city c5" cx="83" cy="197" r="3.2"/>
+      <circle class="ie-city c6" cx="89" cy="250" r="3.2"/>
+    </g>
+    <text class="ie-label" x="172" y="145" text-anchor="end">DUBLIN</text>
+    <g class="ie-van">
+      <g class="van-flip">
+        <rect x="-13" y="-8" width="17" height="11" rx="1" fill="#0e2b1e" stroke="#7ac142" stroke-width="1.1"/>
+        <rect x="-13" y="0" width="17" height="3" fill="#7ac142"/>
+        <path d="M4 -5h5l4 5v3H4z" fill="#f4f7f4"/>
+        <path d="M5.2 -3.6h2.9l2.7 3.6H5.2z" fill="#31393b"/>
+        <circle cx="-7.5" cy="4.4" r="2.4" fill="#12191a"/><circle cx="-7.5" cy="4.4" r=".9" fill="#8d9a97"/>
+        <circle cx="7.5" cy="4.4" r="2.4" fill="#12191a"/><circle cx="7.5" cy="4.4" r=".9" fill="#8d9a97"/>
+      </g>
+      <animateMotion dur="1.9s" begin="0.55s" fill="freeze" rotate="0">
+        <mpath href="#route"/>
+      </animateMotion>
+    </g>
   </svg>
-  <div class="ground"></div>
-  <div class="kerb"></div>
-  <div class="dashes"></div>
-</div>
-<div id="intro-van" aria-hidden="true">
-  <svg viewBox="0 0 430 176" role="img">
-    <rect x="16" y="14" width="262" height="100" fill="#0e2b1e"/>
-    <rect x="16" y="14" width="262" height="7" fill="#f4f7f4"/>
-    <rect x="16" y="100" width="262" height="14" fill="#7ac142"/>
-    <image href="assets/pentium-express.png" x="42" y="38" width="210" height="33"/>
-    <text x="42" y="92" font-family="Archivo, 'Arial Black', sans-serif" font-weight="700" font-size="13" letter-spacing="2.6" fill="#7ac142">DUBLIN &amp; NATIONWIDE</text>
-    <path d="M278 42h46l40 38v34h-86z" fill="#f4f7f4"/>
-    <path d="M287 51h36l30 28h-66z" fill="#31393b"/>
-    <rect x="278" y="100" width="90" height="14" fill="#7ac142"/>
-    <rect x="356" y="86" width="14" height="10" fill="#ffd166"/>
-    <rect x="16" y="114" width="352" height="10" fill="#2b3335"/>
-    <g class="wheel"><circle cx="88" cy="132" r="22" fill="#12191a"/><circle cx="88" cy="132" r="8" fill="#8d9a97"/><rect x="86" y="112" width="4" height="40" fill="#8d9a97"/><rect x="68" y="130" width="40" height="4" fill="#8d9a97"/></g>
-    <g class="wheel"><circle cx="306" cy="132" r="22" fill="#12191a"/><circle cx="306" cy="132" r="8" fill="#8d9a97"/><rect x="304" y="112" width="4" height="40" fill="#8d9a97"/><rect x="286" y="130" width="40" height="4" fill="#8d9a97"/></g>
-  </svg>
+  <div class="intro-word">Pentium Logistics <b>&middot;</b> Dublin &amp; Nationwide</div>
 </div>
 
 <main id="main">
