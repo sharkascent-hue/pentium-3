@@ -9,7 +9,7 @@
   let gone=false;
   const done=()=>{if(gone)return;gone=true;kill();root.classList.remove('intro-on');};
   intro.addEventListener('animationend',e=>{if(e.animationName==='curtain')done();});
-  setTimeout(done,3600);
+  setTimeout(done,4200);
 })();
 
 // quote blocks: one template, cloned into every page that needs it
