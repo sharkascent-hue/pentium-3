@@ -257,41 +257,34 @@ footer{padding:40px 0;border-top:1px solid var(--edge);background:var(--graphite
 html.intro-on,html.intro-on body{overflow:hidden}
 #intro{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
   background:radial-gradient(ellipse 70% 60% at 50% 45%,#15281d 0%,#0c1413 55%,#080c0d 100%);
-  animation:curtain 3.6s cubic-bezier(.72,0,.22,1) forwards;will-change:transform}
-#intro .ie-map{height:min(56vh,430px);width:auto;max-width:82vw;overflow:hidden}
-.ie-outline{fill:rgba(122,193,66,.09);stroke:#7ac142;stroke-width:2.1;stroke-linejoin:round;stroke-linecap:round;
-  stroke-dasharray:1 1;stroke-dashoffset:1;animation:draw .95s cubic-bezier(.32,.72,.3,1) forwards}
+  animation:curtain 3.3s cubic-bezier(.72,0,.22,1) forwards;will-change:transform}
+#intro .ie-map{height:min(56vh,430px);width:auto;max-width:88vw;overflow:hidden}
+.ie-outline{fill:rgba(122,193,66,.13);stroke:#7ac142;stroke-width:2.1;stroke-linejoin:round;stroke-linecap:round;
+  stroke-dasharray:1 1;stroke-dashoffset:1;animation:draw .85s cubic-bezier(.32,.72,.3,1) forwards}
 /* the run is only ever the trail the van lays down behind it */
 .ie-route{fill:none;stroke:none}
 .ie-trail{fill:none;stroke:#f4f7f4;stroke-width:1.9;stroke-linecap:round;opacity:.9;
-  stroke-dasharray:1 1;stroke-dashoffset:1;animation:draw 2.3s linear .4s forwards}
-.ie-city{fill:#7ac142;opacity:0;transform:scale(.2);transform-box:fill-box;transform-origin:center;
+  stroke-dasharray:1 1;stroke-dashoffset:1;animation:draw 1.6s linear .85s forwards}
+.ie-city{fill:#f4f7f4;stroke:#12301f;stroke-width:1.1;opacity:0;transform:scale(.2);transform-box:fill-box;transform-origin:center;
   animation:pop .55s cubic-bezier(.2,1.5,.4,1) forwards}
-.ie-city.c1{animation-delay:.95s}.ie-city.c2{animation-delay:1.41s}.ie-city.c3{animation-delay:1.63s}
-.ie-city.c4{animation-delay:1.83s}.ie-city.c5{animation-delay:2.07s}.ie-city.c6{animation-delay:2.23s}
-.ie-city.c7{animation-delay:2.35s}
-.ie-hub{fill:#f4f7f4;stroke:#7ac142;stroke-width:1.6}
+.ie-city.c1{animation-delay:.85s}.ie-city.c2{animation-delay:1.28s}.ie-city.c3{animation-delay:1.48s}
+.ie-city.c4{animation-delay:1.65s}.ie-city.c5{animation-delay:1.87s}.ie-city.c6{animation-delay:2.02s}
+.ie-city.c7{animation-delay:2.13s}
+.ie-hub{fill:#7ac142;stroke:#0e2b1e;stroke-width:1.4}
 .ie-ping{fill:none;stroke:#7ac142;stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center;
-  animation:ping .85s cubic-bezier(.2,.7,.3,1) 2.68s forwards}
+  animation:ping .7s cubic-bezier(.2,.7,.3,1) 2.44s forwards}
 .ie-label{fill:#f4f7f4;font-family:'Archivo',sans-serif;font-size:11px;font-weight:800;letter-spacing:1.3px;
-  opacity:0;animation:pop .5s ease-out 1.63s forwards}
-/* one eased half-turn each time the run doubles back, instead of a hard mirror */
-.van-flip{transform-box:fill-box;transform-origin:center;animation:vanflip 2.3s linear .4s forwards}
+  opacity:0;animation:pop .5s ease-out 1.48s forwards}
+.van-art{opacity:0;animation:pop .3s ease-out .35s forwards}
 .intro-word{font-family:'Archivo',sans-serif;font-size:clamp(.6rem,2.2vw,.78rem);font-weight:800;letter-spacing:.3em;
   text-transform:uppercase;color:var(--fog);opacity:0;transform:translateY(9px);
-  animation:wordin .75s cubic-bezier(.2,.8,.3,1) 1.8s forwards;text-align:center;padding:0 20px}
+  animation:wordin .7s cubic-bezier(.2,.8,.3,1) 1.6s forwards;text-align:center;padding:0 20px}
 .intro-word b{color:var(--green);font-weight:800}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes pop{to{opacity:1;transform:scale(1)}}
 @keyframes wordin{to{opacity:1;transform:none}}
 @keyframes ping{from{opacity:.75;transform:scale(1)}to{opacity:0;transform:scale(3.6)}}
-@keyframes vanflip{
-  0%,46.9%{transform:scaleX(1)}
-  50.3%{transform:scaleX(.06)}
-  53.7%,79.8%{transform:scaleX(-1)}
-  83.2%{transform:scaleX(.06)}
-  86.6%,100%{transform:scaleX(1)}}
-@keyframes curtain{0%,84%{transform:translateX(0)}100%{transform:translateX(101vw)}}
+@keyframes curtain{0%,82%{transform:translateX(0)}100%{transform:translateX(101vw)}}
 @media(prefers-reduced-motion:reduce){#intro{display:none}}
 
 /* sister company */

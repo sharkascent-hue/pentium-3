@@ -3,13 +3,16 @@
   const intro=document.getElementById('intro');
   if(!intro) return;
   const kill=()=>{intro.remove();};
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches){kill();return;}
+  // once per visit: nobody wants the whole run again on the way back to the homepage
+  let seen=false;
+  try{ seen=sessionStorage.getItem('pl-intro')==='1'; sessionStorage.setItem('pl-intro','1'); }catch(e){}
+  if(seen||matchMedia('(prefers-reduced-motion: reduce)').matches){kill();return;}
   const root=document.documentElement;
   root.classList.add('intro-on');
   let gone=false;
   const done=()=>{if(gone)return;gone=true;kill();root.classList.remove('intro-on');};
   intro.addEventListener('animationend',e=>{if(e.animationName==='curtain')done();});
-  setTimeout(done,4200);
+  setTimeout(done,3900);
 })();
 
 // quote blocks: one template, cloned into every page that needs it
